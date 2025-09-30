@@ -3,20 +3,20 @@
     {
       "id": "mockup-desktop-mobile",
       "description": "Mockup of a laptop and phone displaying a modern website",
-      "imageUrl": "https://images.unsplash.com/photo-1527443195645-1133f7f28990?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc1OTIyOTE0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "website mockup"
+      "imageUrl": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc1OTQxOTM1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website design"
     },
     {
       "id": "before-website",
       "description": "An example of an old, outdated website design",
-      "imageUrl": "https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "website wireframe"
+      "imageUrl": "https://images.unsplash.com/photo-1563986768711-b3Bde3dc821e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTQxOTQyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old website"
     },
     {
       "id": "after-website",
       "description": "An example of a new, modern website design",
-      "imageUrl": "https://images.unsplash.com/photo-1506399558452-3a053723a3a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "beautiful website"
+      "imageUrl": "https://images.unsplash.com/photo-1559028012-215a0b8e9377?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTQxOTQ4MXww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "modern website"
     }
   ]
 }
