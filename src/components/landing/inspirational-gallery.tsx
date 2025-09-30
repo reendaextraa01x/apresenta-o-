@@ -16,7 +16,7 @@ import {
 
 const themes = [
   {
-    name: 'dark',
+    name: 'theme-moderno',
     label: 'Moderno',
     description: 'Vibrante e impactante. Ideal para startups e marcas de tecnologia que querem se destacar.',
     image: 'https://picsum.photos/seed/gallery-modern/600/400',
