@@ -212,7 +212,6 @@ export function AiCopyGenerator() {
                     width={600}
                     height={400}
                     className="rounded-lg shadow-lg aspect-video object-cover"
-                    unoptimized
                   />
                 </CardContent>
               </Card>
