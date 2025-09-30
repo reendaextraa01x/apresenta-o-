@@ -39,6 +39,7 @@ export async function generateHeroSectionCopy(
 
 const copyPrompt = ai.definePrompt({
   name: 'generateHeroSectionCopyPrompt',
+  models: ['googleai/gemini-2.5-flash', 'googleai/gemini-1.5-flash'],
   input: { schema: GenerateHeroSectionCopyInputSchema },
   output: { schema: z.object({
     headline: GenerateHeroSectionCopyOutputSchema.shape.headline,
