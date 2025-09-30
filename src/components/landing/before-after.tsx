@@ -43,7 +43,7 @@ export function BeforeAfter() {
                 width={600}
                 height={400}
                 data-ai-hint={beforeImage.imageHint}
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center opacity-60 grayscale transition-all duration-300 hover:opacity-80 sm:w-full"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center opacity-60 grayscale transition-all duration-300 hover:opacity-80 sm:w-full"
               />
             )}
           </div>
@@ -61,7 +61,7 @@ export function BeforeAfter() {
                     width={600}
                     height={400}
                     data-ai-hint={afterImage.imageHint}
-                    className="mx-auto aspect-video overflow-hidden object-cover object-center sm:w-full"
+                    className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full"
                   />
                 )}
               </CardContent>
