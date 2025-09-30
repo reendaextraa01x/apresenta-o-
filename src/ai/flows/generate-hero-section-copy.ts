@@ -1,3 +1,4 @@
+
 // src/ai/flows/generate-hero-section-copy.ts
 'use server';
 
@@ -69,8 +70,11 @@ const generateHeroSectionCopyFlow = ai.defineFlow(
     const [copyResult, imageResult] = await Promise.all([
       copyPrompt(input),
       ai.generate({
-        model: 'googleai/imagen-4.0-fast-generate-001',
+        model: 'googleai/gemini-2.5-flash-image-preview',
         prompt: `Create a professional and modern hero image for a website about: "${input.businessDescription}". The image should be abstract and visually appealing, without any text.`,
+        config: {
+          responseModalities: ['TEXT', 'IMAGE'],
+        },
       }),
     ]);
 
