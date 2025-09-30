@@ -24,7 +24,7 @@ const questions = [
       { id: 'bold', value: 'Moderna e Ousada', label: 'Sans-serif, Forte', className: 'font-bold text-2xl' },
       { id: 'elegant', value: 'Clássica e Confiável', label: 'Serifada, Elegante', className: 'font-serif text-2xl' },
       { id: 'minimalist', value: 'Minimalista e Limpa', label: 'Fina, Leve', className: 'font-light text-2xl' },
-      { id 'friendly', value: 'Acessível e Amigável', label: 'Arredondada, Casual', className: 'font-sans text-2xl rounded-lg' },
+      { id: 'friendly', value: 'Acessível e Amigável', label: 'Arredondada, Casual', className: 'font-sans text-2xl rounded-lg' },
     ],
   },
   {

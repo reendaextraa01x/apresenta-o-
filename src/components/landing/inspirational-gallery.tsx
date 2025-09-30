@@ -3,8 +3,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent }'@/components/ui/card';
-import { Check, Palette, Sparkles, Wand2 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Check, Palette, Wand2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
   Carousel,
