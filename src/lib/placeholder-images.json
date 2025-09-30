@@ -9,14 +9,14 @@
     {
       "id": "before-website",
       "description": "An example of an old, outdated website design",
-      "imageUrl": "https://images.unsplash.com/photo-1639395241103-9c855f93a90c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTI1NjcwMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "old website"
+      "imageUrl": "https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "website wireframe"
     },
     {
       "id": "after-website",
       "description": "An example of a new, modern website design",
-      "imageUrl": "https://images.unsplash.com/photo-1733503711060-1df31554390f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTE2NTA1OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern website"
+      "imageUrl": "https://images.unsplash.com/photo-1506399558452-3a053723a3a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "beautiful website"
     }
   ]
 }
