@@ -34,8 +34,10 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container px-4 md:px-6">
+    <section id="benefits" className="relative w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-5"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-background via-transparent to-background"></div>
+        <div className="container relative px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-semibold text-primary">Benefícios</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">

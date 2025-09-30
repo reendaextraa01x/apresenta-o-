@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'mockup-desktop-mobile');

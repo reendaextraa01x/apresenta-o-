@@ -2,8 +2,11 @@ import { XCircle, Search, TrendingUp } from 'lucide-react';
 
 export function ProblemSolution() {
   return (
-    <section id="problem" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20">
-      <div className="container px-4 md:px-6">
+    <section id="problem" className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-secondary/20">
+      <div className="absolute inset-0 bg-grid opacity-30"></div>
+       <div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+      <div className="absolute -right-32 -bottom-32 h-64 w-64 rounded-full bg-accent/10 blur-3xl"></div>
+      <div className="container relative px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="space-y-4 scroll-animate from-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

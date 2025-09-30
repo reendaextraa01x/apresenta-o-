@@ -35,8 +35,9 @@ const faqs = [
 
 export function Faq() {
   return (
-    <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container px-4 md:px-6">
+    <section id="faq" className="relative w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-[400px] bg-gradient-to-b from-secondary/10 to-transparent"></div>
+      <div className="container relative px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
             Dúvidas Frequentes
@@ -48,8 +49,8 @@ export function Faq() {
         <div className="mx-auto max-w-3xl scroll-animate delay-200">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (
-              <AccordionItem value={`item-${i}`} key={i}>
-                <AccordionTrigger className="font-headline text-lg text-left">
+              <AccordionItem value={`item-${i}`} key={i} className="bg-secondary/20 border-border/50 rounded-lg mb-4 px-4 shine-effect transition-all hover:border-primary/50">
+                <AccordionTrigger className="font-headline text-lg text-left hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base">

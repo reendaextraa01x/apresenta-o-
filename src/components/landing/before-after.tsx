@@ -12,8 +12,10 @@ export function BeforeAfter() {
   const afterImage = PlaceHolderImages.find((img) => img.id === 'after-website');
 
   return (
-    <section id="before-after" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20">
-      <div className="container px-4 md:px-6">
+    <section id="before-after" className="relative w-full py-12 md:py-24 lg:py-32 bg-secondary/20 overflow-hidden">
+      <div className="absolute inset-0 bg-dots-pattern opacity-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-background via-transparent to-background"></div>
+      <div className="container relative px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center scroll-animate">
           <div className="space-y-2">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
