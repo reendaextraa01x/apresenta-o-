@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -39,8 +40,8 @@ export function Hero() {
                     <Image
                     src={heroImage.imageUrl}
                     alt="Mockup de um laptop e celular exibindo um site moderno"
-                    width={550}
-                    height={400}
+                    width={500}
+                    height={350}
                     data-ai-hint={heroImage.imageHint}
                     className="rounded-xl shadow-2xl shadow-primary/10 transform transition-transform duration-500 hover:scale-105"
                     priority
