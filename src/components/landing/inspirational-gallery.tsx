@@ -56,6 +56,10 @@ export function InspirationalGallery() {
     setMounted(true);
   }, []);
 
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+  };
+  
   return (
     <section id="gallery" className="relative w-full py-12 md:py-24 lg:py-32 bg-secondary/20 overflow-hidden">
       <div className="absolute inset-0 bg-dots-pattern opacity-10"></div>
@@ -96,10 +100,9 @@ export function InspirationalGallery() {
                     <CardContent className="p-4 bg-background/50">
                         <h3 className="font-headline text-xl font-bold">{item.label}</h3>
                         <p className="text-sm text-muted-foreground mt-1 mb-4 h-12">{item.description}</p>
-                        <Button onClick={() => setTheme(item.name)} className="w-full font-bold" variant={theme === item.name ? 'default' : 'outline'}>
+                        <Button onClick={() => handleThemeChange(item.name)} className="w-full font-bold" variant={theme === item.name ? 'default' : 'outline'}>
                             {mounted && (theme === item.name ? <Check className="mr-2 h-4 w-4" /> : <Palette className="mr-2 h-4 w-4" />)}
                             {mounted && (theme === item.name ? 'Tema Ativado' : 'Ativar Tema')}
-                            {!mounted && <Palette className="mr-2 h-4 w-4" />}
                             {!mounted && 'Ativar Tema'}
                         </Button>
                     </CardContent>
