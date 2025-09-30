@@ -1,7 +1,10 @@
+'use client';
+import { useState } from 'react';
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { Poppins, PT_Sans } from 'next/font/google';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,11 +18,11 @@ const ptSans = PT_Sans({
   variable: '--font-body',
 });
 
-export const metadata: Metadata = {
-  title: 'SiteSpark',
-  description:
-    'Transforme Seu Negócio em 3 Dias com um Site Profissional por Apenas R$ 297',
-};
+// export const metadata: Metadata = {
+//   title: 'SiteSpark',
+//   description:
+//     'Transforme Seu Negócio em 3 Dias com um Site Profissional por Apenas R$ 297',
+// };
 
 export default function RootLayout({
   children,
@@ -27,10 +30,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${poppins.variable} ${ptSans.variable} font-body antialiased`}>
-        {children}
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
