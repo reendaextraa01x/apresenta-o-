@@ -36,7 +36,7 @@ export function Benefits() {
   return (
     <section id="benefits" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 fade-in">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-semibold text-primary">Benefícios</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
                 Tudo que você precisa para decolar
@@ -47,7 +47,7 @@ export function Benefits() {
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-8">
           {benefits.map((benefit, i) => (
-            <div key={benefit.title} className={`fade-in fade-in-delay-${i + 1} flex items-start space-x-4 rounded-lg bg-secondary/50 p-6 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10`}>
+            <div key={benefit.title} className={`scroll-animate flex items-start space-x-4 rounded-lg bg-secondary/50 p-6 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10 shine-effect delay-${i * 100}`}>
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     {benefit.icon}
                 </div>

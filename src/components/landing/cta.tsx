@@ -7,7 +7,7 @@ export function Cta() {
   return (
     <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/30">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-        <div className="space-y-3 fade-in">
+        <div className="space-y-3 scroll-animate">
           <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
             Não perca esta oportunidade única!
           </h2>
@@ -15,17 +15,17 @@ export function Cta() {
             Transforme seu negócio com um site profissional por um preço que cabe no seu bolso. A hora é agora.
           </p>
         </div>
-        <div className="mx-auto w-full max-w-sm space-y-6 fade-in fade-in-delay-1">
+        <div className="mx-auto w-full max-w-sm space-y-6 scroll-animate delay-200">
           <div className="grid grid-cols-1 gap-4 text-left">
-            <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border">
+            <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/50 shine-effect">
                 <Tag className="h-8 w-8 text-primary"/>
                 <div className="text-lg">De <span className="line-through">R$ 997</span> por apenas <span className="font-bold text-primary text-xl">R$ 297</span></div>
             </div>
-             <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border">
+             <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/50 shine-effect">
                 <Calendar className="h-8 w-8 text-primary"/>
                 <div className="text-lg">Entrega em até <span className="font-bold">3 dias úteis</span></div>
             </div>
-             <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border">
+             <div className="flex items-center gap-4 rounded-lg bg-secondary/80 p-4 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/50 shine-effect">
                 <Users className="h-8 w-8 text-primary"/>
                 <div className="text-lg">Promoção válida para os <span className="font-bold">primeiros 10 clientes</span></div>
             </div>

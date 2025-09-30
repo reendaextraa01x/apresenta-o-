@@ -37,7 +37,7 @@ export function Faq() {
   return (
     <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 fade-in">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
             Dúvidas Frequentes
           </h2>
@@ -45,7 +45,7 @@ export function Faq() {
             Ainda tem perguntas? Encontre as respostas aqui.
           </p>
         </div>
-        <div className="mx-auto max-w-3xl fade-in fade-in-delay-1">
+        <div className="mx-auto max-w-3xl scroll-animate delay-200">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (
               <AccordionItem value={`item-${i}`} key={i}>

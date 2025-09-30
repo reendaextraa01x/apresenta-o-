@@ -5,7 +5,7 @@ export function ProblemSolution() {
     <section id="problem" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="space-y-4 fade-in">
+          <div className="space-y-4 scroll-animate from-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Você está perdendo clientes sem um site?
             </h2>
@@ -13,9 +13,9 @@ export function ProblemSolution() {
               No mundo digital de hoje, não ter uma presença online profissional é como ter uma loja com as portas fechadas.
             </p>
           </div>
-          <div className="space-y-8">
-            <div className="flex items-start gap-4 fade-in fade-in-delay-1">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <div className="space-y-8 scroll-animate from-right">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300 hover:scale-110">
                 <Search className="h-6 w-6" />
               </div>
               <div>
@@ -25,8 +25,8 @@ export function ProblemSolution() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 fade-in fade-in-delay-2">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300 hover:scale-110">
                 <XCircle className="h-6 w-6" />
               </div>
               <div>
@@ -36,7 +36,7 @@ export function ProblemSolution() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 fade-in fade-in-delay-3 p-4 rounded-lg bg-primary/10 border border-primary/20">
+            <div className="flex items-start gap-4 p-4 rounded-lg bg-primary/10 border border-primary/20 shine-effect">
                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <TrendingUp className="h-6 w-6" />
               </div>
