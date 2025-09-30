@@ -1,5 +1,3 @@
-'use client';
-import { useState } from 'react';
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
@@ -10,19 +8,21 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700', '900'],
   variable: '--font-headline',
+  display: 'swap',
 });
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-body',
+  display: 'swap',
 });
 
-// export const metadata: Metadata = {
-//   title: 'SiteSpark',
-//   description:
-//     'Transforme Seu Negócio em 3 Dias com um Site Profissional por Apenas R$ 297',
-// };
+export const metadata: Metadata = {
+  title: 'SiteSpark | Seu Site Profissional em 3 Dias',
+  description:
+    'Transforme Seu Negócio com um Site Profissional e de Alta Conversão. Entregamos em até 3 dias por um preço que você pode pagar.',
+};
 
 export default function RootLayout({
   children,
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${ptSans.variable} font-body antialiased`}>
+      <body className={`${poppins.variable} ${ptSans.variable} font-body antialiased no-select`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

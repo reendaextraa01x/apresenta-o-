@@ -1,4 +1,4 @@
-import { CheckCircle2, Award, Smartphone, BarChart, Rocket } from 'lucide-react';
+import { Target, Award, Smartphone, BarChart, Rocket } from 'lucide-react';
 
 const benefits = [
   {
@@ -25,7 +25,7 @@ const benefits = [
       'Estrutura otimizada para que seus clientes te encontrem no Google.',
   },
   {
-    icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
+    icon: <Target className="h-8 w-8 text-primary" />,
     title: 'Foco em conversão e ROI',
     description:
       'Cada elemento do site é pensado para transformar visitantes em clientes.',
