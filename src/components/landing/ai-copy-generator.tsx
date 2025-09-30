@@ -1,7 +1,6 @@
 // src/components/landing/ai-copy-generator.tsx
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -47,11 +46,11 @@ export function AiCopyGenerator() {
     }
   };
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text: string, subject: string) => {
     navigator.clipboard.writeText(text);
     toast({
-      title: 'Copiado!',
-      description: 'O texto foi copiado para a área de transferência.',
+      title: `${subject} copiado!`,
+      description: `O ${subject.toLowerCase()} foi copiado para a área de transferência.`,
     });
   };
 
@@ -71,8 +70,8 @@ export function AiCopyGenerator() {
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Descreva seu negócio e nossa inteligência artificial criará
-            sugestões de títulos, textos e até uma imagem para a seção
-            principal do seu site.
+            sugestões de títulos, textos e um prompt para gerar uma imagem única
+            para a seção principal do seu site.
           </p>
         </div>
 
@@ -134,11 +133,11 @@ export function AiCopyGenerator() {
               <Card className="bg-background/50">
                 <CardHeader>
                   <CardTitle className="font-headline text-xl">
-                    Sugestão de Imagem
+                    Sugestão de Prompt de Imagem
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Skeleton className="aspect-video w-full" />
+                  <Skeleton className="h-24 w-full" />
                 </CardContent>
               </Card>
             </div>
@@ -164,7 +163,7 @@ export function AiCopyGenerator() {
                           variant="ghost"
                           size="icon"
                           className="absolute top-2 right-2 h-7 w-7 opacity-0 group-hover:opacity-100 transition-opacity"
-                          onClick={() => handleCopy(headline)}
+                          onClick={() => handleCopy(headline, 'Título')}
                         >
                           <Copy className="h-4 w-4" />
                         </Button>
@@ -189,7 +188,7 @@ export function AiCopyGenerator() {
                           variant="ghost"
                           size="icon"
                           className="absolute top-2 right-2 h-7 w-7 opacity-0 group-hover:opacity-100 transition-opacity"
-                          onClick={() => handleCopy(body)}
+                          onClick={() => handleCopy(body, 'Texto')}
                         >
                           <Copy className="h-4 w-4" />
                         </Button>
@@ -202,17 +201,26 @@ export function AiCopyGenerator() {
                 <CardHeader>
                   <CardTitle className="font-headline text-xl text-primary flex items-center gap-2">
                     <ImageIcon />
-                    Sugestão de Imagem
+                    Prompt para Imagem Única
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <Image
-                    src={generatedCopy.heroImage}
-                    alt="Imagem gerada por IA para a seção hero"
-                    width={600}
-                    height={400}
-                    className="rounded-lg shadow-lg aspect-video object-cover"
-                  />
+                <CardContent className="space-y-4">
+                  <div className="group relative rounded-lg bg-secondary/50 p-4">
+                    <p className="text-muted-foreground text-sm italic">
+                      {generatedCopy.imagePrompt}
+                    </p>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute top-2 right-2 h-7 w-7 opacity-0 group-hover:opacity-100 transition-opacity"
+                      onClick={() => handleCopy(generatedCopy.imagePrompt, 'Prompt')}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Copie o prompt acima e use em uma ferramenta de IA como Midjourney ou DALL-E para criar sua imagem.
+                  </p>
                 </CardContent>
               </Card>
             </div>
