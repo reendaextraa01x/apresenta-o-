@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "mockup-desktop-mobile",
+      "description": "Mockup of a laptop and phone displaying a modern website",
+      "imageUrl": "https://images.unsplash.com/photo-1527443195645-1133f7f28990?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc1OTIyOTE0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website mockup"
+    },
+    {
+      "id": "before-website",
+      "description": "An example of an old, outdated website design",
+      "imageUrl": "https://images.unsplash.com/photo-1639395241103-9c855f93a90c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTI1NjcwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old website"
+    },
+    {
+      "id": "after-website",
+      "description": "An example of a new, modern website design",
+      "imageUrl": "https://images.unsplash.com/photo-1733503711060-1df31554390f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTE2NTA1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern website"
+    }
+  ]
 }
