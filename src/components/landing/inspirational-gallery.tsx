@@ -88,7 +88,7 @@ export function InspirationalGallery() {
             {themes.map((item, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className={cn("overflow-hidden transition-all duration-300 border-2", theme === item.name ? "border-primary shadow-2xl shadow-primary/20" : "border-border/50 hover:border-primary/50")}>
+                  <Card className={cn("overflow-hidden transition-all duration-300 border-2", mounted && theme === item.name ? "border-primary shadow-2xl shadow-primary/20" : "border-border/50 hover:border-primary/50")}>
                     <Image
                       src={item.image}
                       alt={`Exemplo de site ${item.label}`}
@@ -100,7 +100,7 @@ export function InspirationalGallery() {
                     <CardContent className="p-4 bg-background/50">
                         <h3 className="font-headline text-xl font-bold">{item.label}</h3>
                         <p className="text-sm text-muted-foreground mt-1 mb-4 h-12">{item.description}</p>
-                        <Button onClick={() => handleThemeChange(item.name)} className="w-full font-bold" variant={theme === item.name ? 'default' : 'outline'}>
+                        <Button onClick={() => handleThemeChange(item.name)} className="w-full font-bold" variant={mounted && theme === item.name ? 'default' : 'outline'}>
                             {mounted && (theme === item.name ? <Check className="mr-2 h-4 w-4" /> : <Palette className="mr-2 h-4 w-4" />)}
                             {mounted && (theme === item.name ? 'Tema Ativado' : 'Ativar Tema')}
                             {!mounted && 'Ativar Tema'}
