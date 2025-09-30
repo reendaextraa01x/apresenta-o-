@@ -3,32 +3,28 @@ import { Target, Award, Smartphone, BarChart, Rocket } from 'lucide-react';
 const benefits = [
   {
     icon: <Rocket className="h-8 w-8 text-primary" />,
-    title: 'Site pronto em 1 a 3 dias úteis',
-    description: 'Tenha seu novo site no ar em tempo recorde, sem enrolação.',
+    title: 'Lançamento Rápido: 3 Dias',
+    description: 'Seu novo site no ar em tempo recorde para você começar a vender o quanto antes.',
   },
   {
     icon: <Award className="h-8 w-8 text-primary" />,
-    title: 'Design moderno e exclusivo',
-    description:
-      'Criamos um visual único que reflete a identidade da sua marca.',
+    title: 'Design de Alto Impacto',
+    description: 'Criamos um visual único e memorável que te destaca da concorrência.',
   },
   {
     icon: <Smartphone className="h-8 w-8 text-primary" />,
-    title: '100% responsivo',
-    description:
-      'Seu site perfeito em celulares, tablets e computadores.',
+    title: 'Experiência Perfeita em Qualquer Tela',
+    description: 'Seu site impecável e fácil de usar em celulares, tablets e desktops.',
   },
   {
     icon: <BarChart className="h-8 w-8 text-primary" />,
-    title: 'Otimização SEO para o Google',
-    description:
-      'Estrutura otimizada para que seus clientes te encontrem no Google.',
+    title: 'Encontrado no Google (SEO)',
+    description: 'Estrutura otimizada para que seus clientes te encontrem quando mais precisam.',
   },
   {
     icon: <Target className="h-8 w-8 text-primary" />,
-    title: 'Foco em conversão e ROI',
-    description:
-      'Cada elemento do site é pensado para transformar visitantes em clientes.',
+    title: 'Foco em Vendas e Lucro (ROI)',
+    description: 'Cada detalhe é pensado para uma única coisa: transformar visitantes em clientes.',
   },
 ];
 
@@ -39,12 +35,12 @@ export function Benefits() {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-background via-transparent to-background"></div>
         <div className="container relative px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
-            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-semibold text-primary">Benefícios</div>
+            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-semibold text-primary">A Diferença SiteSpark</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
-                Tudo que você precisa para decolar
+                Não é apenas um site, é uma máquina de vendas.
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Um site profissional não é um custo, é um investimento que se paga rapidamente.
+                Entregamos a ferramenta completa que seu negócio precisa para crescer e lucrar no ambiente digital.
             </p>
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-8">

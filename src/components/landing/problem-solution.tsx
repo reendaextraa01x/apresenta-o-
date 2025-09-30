@@ -10,10 +10,10 @@ export function ProblemSolution() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="space-y-4 scroll-animate from-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Você está perdendo clientes sem um site?
+              Seu negócio está invisível na internet?
             </h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
-              No mundo digital de hoje, não ter uma presença online profissional é como ter uma loja com as portas fechadas.
+              Sem um site profissional, você está deixando dinheiro na mesa. Todos os dias. Veja como isso afeta você:
             </p>
           </div>
           <div className="space-y-8 scroll-animate from-right">
@@ -24,7 +24,7 @@ export function ProblemSolution() {
               <div>
                 <h3 className="text-lg font-bold font-headline">Clientes não te encontram</h3>
                 <p className="text-muted-foreground">
-                  Mais de 80% dos consumidores pesquisam online antes de fazer uma compra. Se você não está no Google, você não existe para eles.
+                  Seu público pesquisa no Google. Se você não aparece, é como se sua loja estivesse de portas fechadas para 90% dos seus potenciais clientes.
                 </p>
               </div>
             </div>
@@ -33,9 +33,9 @@ export function ProblemSolution() {
                 <XCircle className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold font-headline">Seu negócio parece amador</h3>
+                <h3 className="text-lg font-bold font-headline">Sua marca parece amadora</h3>
                 <p className="text-muted-foreground">
-                  Um negócio sem site (ou com um site ruim) transmite desconfiança e afasta clientes que buscam profissionalismo e credibilidade.
+                  Um site ruim ou a falta dele gera desconfiança. Seus concorrentes com sites profissionais estão roubando seus clientes por parecerem mais confiáveis.
                 </p>
               </div>
             </div>
@@ -44,9 +44,9 @@ export function ProblemSolution() {
                 <TrendingUp className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold font-headline text-primary">A Solução: Um Vendedor 24/7</h3>
+                <h3 className="text-lg font-bold font-headline text-primary">A Solução: Seu Vendedor Digital 24/7</h3>
                 <p className="text-muted-foreground">
-                  Nossa solução é um site rápido, profissional e otimizado que atrai e converte clientes para você, 24 horas por dia, 7 dias por semana.
+                  Nós criamos um site que não apenas impressiona, mas atua como um vendedor incansável, atraindo, engajando e convertendo clientes para você, mesmo enquanto você dorme.
                 </p>
               </div>
             </div>

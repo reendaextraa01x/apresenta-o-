@@ -16,15 +16,15 @@ export function Hero() {
             <div className="space-y-6 text-center md:text-left">
                 <Badge variant="outline" className="font-semibold border-primary/50 text-primary py-1 px-3 fade-in">Oferta por Tempo Limitado!</Badge>
                 <h1 className="font-headline text-4xl font-extrabold tracking-tight lg:text-5xl xl:text-6xl fade-in delay-100">
-                    Seu Site Profissional em 3 Dias por Apenas <span className="text-primary text-glow">R$ 297</span>
+                    Tenha um Site que Vende por Você, por Apenas <span className="text-primary text-glow">R$ 297</span>
                 </h1>
                 <p className="text-lg text-muted-foreground md:text-xl fade-in delay-200">
-                    De <span className="line-through">R$ 997</span> por um valor que cabe no seu bolso. Tenha um site que vende por você 24h por dia.
+                    Transforme visitantes em clientes com um site profissional de alta conversão. De <span className="line-through">R$ 997</span> por um valor que você pode pagar.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start fade-in delay-300">
                     <Link href="#cta">
                         <Button size="lg" className="w-full sm:w-auto">
-                            Garantir minha vaga
+                            Quero meu site agora
                             <ArrowRight className="ml-2"/>
                         </Button>
                     </Link>
@@ -34,8 +34,18 @@ export function Hero() {
                         </Button>
                     </Link>
                 </div>
+                 <div className="flex items-center justify-center md:justify-start gap-2 mt-4 text-muted-foreground fade-in delay-400">
+                    <div className="flex text-primary">
+                        <Star className="w-5 h-5 fill-current" />
+                        <Star className="w-5 h-5 fill-current" />
+                        <Star className="w-5 h-5 fill-current" />
+                        <Star className="w-5 h-5 fill-current" />
+                        <Star className="w-5 h-5 fill-current" />
+                    </div>
+                    <span>+50 clientes satisfeitos</span>
+                </div>
             </div>
-            <div className="flex justify-center fade-in delay-400">
+            <div className="flex justify-center fade-in delay-500">
                 {heroImage && (
                     <Image
                     src={heroImage.imageUrl}
