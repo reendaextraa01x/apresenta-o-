@@ -42,7 +42,7 @@ export function Hero() {
                         <Star className="w-5 h-5 fill-current" />
                         <Star className="w-5 h-5 fill-current" />
                     </div>
-                    <span>+50 clientes satisfeitos</span>
+                    <span>+ de 500 clientes satisfeitos</span>
                 </div>
             </div>
             <div className="flex justify-center fade-in delay-500">
