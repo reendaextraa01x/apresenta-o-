@@ -49,7 +49,7 @@ export function BeforeAfter() {
             <CardHeader>
               <CardTitle className="font-headline text-center text-2xl text-primary">Depois</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-0">
               {afterImage && (
                 <Image
                   src={afterImage.imageUrl}
