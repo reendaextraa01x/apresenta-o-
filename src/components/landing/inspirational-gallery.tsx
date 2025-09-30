@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -50,6 +50,11 @@ const themes = [
 
 export function InspirationalGallery() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section id="gallery" className="relative w-full py-12 md:py-24 lg:py-32 bg-secondary/20 overflow-hidden">
@@ -92,8 +97,10 @@ export function InspirationalGallery() {
                         <h3 className="font-headline text-xl font-bold">{item.label}</h3>
                         <p className="text-sm text-muted-foreground mt-1 mb-4 h-12">{item.description}</p>
                         <Button onClick={() => setTheme(item.name)} className="w-full font-bold" variant={theme === item.name ? 'default' : 'outline'}>
-                            {theme === item.name ? <Check className="mr-2 h-4 w-4" /> : <Palette className="mr-2 h-4 w-4" />}
-                            {theme === item.name ? 'Tema Ativado' : 'Ativar Tema'}
+                            {mounted && (theme === item.name ? <Check className="mr-2 h-4 w-4" /> : <Palette className="mr-2 h-4 w-4" />)}
+                            {mounted && (theme === item.name ? 'Tema Ativado' : 'Ativar Tema')}
+                            {!mounted && <Palette className="mr-2 h-4 w-4" />}
+                            {!mounted && 'Ativar Tema'}
                         </Button>
                     </CardContent>
                   </Card>
