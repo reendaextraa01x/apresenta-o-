@@ -31,7 +31,7 @@ export function Cta() {
                 <div className="text-lg">Restam <span className="font-bold">7 vagas</span> nesta promoção</div>
             </div>
           </div>
-          <Link href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20garantir%20meu%20site%20pelo%20pre%C3%A7o%20promocional." target="_blank" rel="noopener noreferrer">
+          <Link href="https://wa.me/message/TLKNNAL6RZ37E1" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="w-full animate-button-pulse font-bold text-lg"
