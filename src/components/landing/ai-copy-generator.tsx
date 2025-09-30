@@ -5,41 +5,42 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  generateHeroSectionCopy,
-  GenerateHeroSectionCopyOutput,
-} from '@/ai/flows/generate-hero-section-copy';
+  brandArchitect,
+  BrandArchitectOutput,
+} from '@/ai/flows/brand-architect-flow';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Wand2 } from 'lucide-react';
+import { Wand2, Paintbrush } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export function AiCopyGenerator() {
   const [businessDescription, setBusinessDescription] = useState('');
-  const [generatedCopy, setGeneratedCopy] =
-    useState<GenerateHeroSectionCopyOutput | null>(null);
+  const [generatedContent, setGeneratedContent] =
+    useState<BrandArchitectOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleGenerateCopy = async () => {
+  const handleGenerate = async () => {
     if (!businessDescription.trim()) {
       toast({
         title: 'Descrição vazia',
-        description: 'Por favor, descreva seu negócio antes de gerar o conteúdo.',
+        description:
+          'Por favor, descreva seu negócio antes de gerar o conteúdo.',
         variant: 'destructive',
       });
       return;
     }
     setIsLoading(true);
-    setGeneratedCopy(null);
+    setGeneratedContent(null);
     try {
-      const result = await generateHeroSectionCopy({ businessDescription });
-      setGeneratedCopy(result);
+      const result = await brandArchitect({ businessDescription });
+      setGeneratedContent(result);
     } catch (error) {
       console.error(error);
       toast({
         title: 'Erro ao gerar conteúdo',
         description:
-          'Não foi possível gerar o conteúdo. Tente novamente mais tarde.',
+          'A IA não conseguiu gerar o conteúdo. Isso pode ser um problema temporário. Tente novamente mais tarde.',
         variant: 'destructive',
       });
     } finally {
@@ -56,16 +57,14 @@ export function AiCopyGenerator() {
       <div className="container relative px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 scroll-animate">
           <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
-            Visualize seu Site com IA
+            Arquiteto de Marcas com IA
           </div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
-            Veja uma prévia do seu site em segundos
+            Visualize a Identidade da sua Marca em Segundos
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Descreva seu negócio e nossa inteligência artificial criará sugestões de texto e uma prévia visual da página inicial do seu futuro site.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            (Esta é uma ilustração básica. A imagem de fundo é apenas para demonstração.)
+            Descreva seu negócio e nosso arquiteto de IA criará um conceito de
+            marca, textos e uma prévia visual exclusiva para seu site.
           </p>
         </div>
 
@@ -87,12 +86,12 @@ export function AiCopyGenerator() {
                   disabled={isLoading}
                 />
                 <Button
-                  onClick={handleGenerateCopy}
+                  onClick={handleGenerate}
                   disabled={isLoading}
                   size="lg"
                   className="w-full font-bold"
                 >
-                  {isLoading ? 'Gerando...' : 'Visualizar Site Mágico'}
+                  {isLoading ? 'Criando sua marca...' : 'Gerar Identidade Visual'}
                 </Button>
               </CardContent>
             </Card>
@@ -101,37 +100,53 @@ export function AiCopyGenerator() {
             <Card className="bg-background/50 border-border/50">
               <CardHeader>
                 <CardTitle className="font-headline text-xl flex items-center gap-2">
-                  <Wand2 className="text-primary" />
+                  <Paintbrush className="text-primary" />
                   2. Resultado da IA
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="aspect-video w-full rounded-lg bg-secondary/50 flex items-center justify-center border-2 border-dashed border-border/50 overflow-hidden">
                   {isLoading && (
-                    <div className="w-full h-full p-4">
-                      <Skeleton className="w-full h-full" />
-                      <p className="text-sm text-muted-foreground mt-2 text-center">A IA está criando seu conteúdo, aguarde...</p>
+                    <div className="w-full h-full p-4 space-y-2">
+                      <Skeleton className="w-1/2 h-6" />
+                       <Skeleton className="w-full h-full" />
+                      <p className="text-sm text-muted-foreground mt-2 text-center">
+                        A IA está desenhando seu conceito, aguarde...
+                      </p>
                     </div>
                   )}
-                  {!isLoading && !generatedCopy && (
+                  {!isLoading && !generatedContent && (
                     <div className="text-center text-muted-foreground p-4">
-                      <p>A pré-visualização do seu site aparecerá aqui.</p>
+                      <p>
+                        A pré-visualização da sua identidade visual aparecerá
+                        aqui.
+                      </p>
                     </div>
                   )}
-                  {generatedCopy?.backgroundImageUrl && (
-                     <div className="relative w-full h-full fade-in text-white bg-black">
-                        <Image
-                            src={generatedCopy.backgroundImageUrl}
-                            alt="Fundo para mockup de site gerado por IA"
-                            fill
-                            className="object-cover opacity-50"
-                            unoptimized
-                        />
-                         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 space-y-4">
-                            <h3 className="font-headline text-2xl md:text-3xl font-bold text-shadow-lg">{generatedCopy.headline}</h3>
-                            <p className="text-sm md:text-base text-shadow">{generatedCopy.description}</p>
-                            <Button className="font-bold" size="lg">{generatedCopy.ctaButton}</Button>
-                         </div>
+                  {generatedContent?.heroImage && (
+                    <div className="relative w-full h-full fade-in text-white bg-black">
+                      <Image
+                        src={generatedContent.heroImage}
+                        alt="Fundo para mockup de site gerado por IA"
+                        fill
+                        className="object-cover opacity-50"
+                        unoptimized
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 space-y-4">
+                        <div className="absolute top-2 left-2 bg-black/50 px-2 py-1 rounded-md text-xs">
+                          <span className="font-bold">Conceito:</span>{' '}
+                          {generatedContent.brandConcept}
+                        </div>
+                        <h3 className="font-headline text-2xl md:text-3xl font-bold text-shadow-lg">
+                          {generatedContent.headline}
+                        </h3>
+                        <p className="text-sm md:text-base text-shadow">
+                          {generatedContent.description}
+                        </p>
+                        <Button className="font-bold" size="lg">
+                          {generatedContent.ctaButton}
+                        </Button>
+                      </div>
                     </div>
                   )}
                 </div>
