@@ -64,6 +64,9 @@ export function AiCopyGenerator() {
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Descreva seu negócio e nossa inteligência artificial criará sugestões de texto e uma prévia visual da página inicial do seu futuro site.
           </p>
+          <p className="text-sm text-muted-foreground">
+            (Esta é uma ilustração básica. A imagem de fundo é apenas para demonstração.)
+          </p>
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 items-start">
