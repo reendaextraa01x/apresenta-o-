@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/generate-website-image.ts';
+import '@/ai/flows/generate-hero-section-copy.ts';

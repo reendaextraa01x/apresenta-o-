@@ -1,45 +1,45 @@
-// src/components/landing/ai-website-generator.tsx
+// src/components/landing/ai-copy-generator.tsx
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  generateWebsiteImage,
-  GenerateWebsiteImageOutput,
-} from '@/ai/flows/generate-website-image';
+  generateHeroSectionCopy,
+  GenerateHeroSectionCopyOutput,
+} from '@/ai/flows/generate-hero-section-copy';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Wand2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
 
-export function AiWebsiteGenerator() {
+export function AiCopyGenerator() {
   const [businessDescription, setBusinessDescription] = useState('');
-  const [generatedImage, setGeneratedImage] =
-    useState<GenerateWebsiteImageOutput | null>(null);
+  const [generatedCopy, setGeneratedCopy] =
+    useState<GenerateHeroSectionCopyOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleGenerateImage = async () => {
+  const handleGenerateCopy = async () => {
     if (!businessDescription.trim()) {
       toast({
         title: 'Descrição vazia',
-        description: 'Por favor, descreva seu negócio antes de gerar a imagem.',
+        description: 'Por favor, descreva seu negócio antes de gerar o conteúdo.',
         variant: 'destructive',
       });
       return;
     }
     setIsLoading(true);
-    setGeneratedImage(null);
+    setGeneratedCopy(null);
     try {
-      const result = await generateWebsiteImage({ businessDescription });
-      setGeneratedImage(result);
+      const result = await generateHeroSectionCopy({ businessDescription });
+      setGeneratedCopy(result);
     } catch (error) {
       console.error(error);
       toast({
-        title: 'Erro ao gerar imagem',
+        title: 'Erro ao gerar conteúdo',
         description:
-          'Não foi possível gerar a imagem. Tente novamente mais tarde.',
+          'Não foi possível gerar o conteúdo. Tente novamente mais tarde.',
         variant: 'destructive',
       });
     } finally {
@@ -59,11 +59,10 @@ export function AiWebsiteGenerator() {
             Visualize seu Site com IA
           </div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
-            Veja um rascunho do seu site em segundos
+            Veja uma prévia do seu site em segundos
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Descreva seu negócio e nossa inteligência artificial criará um
-            mockup visual da página inicial do seu futuro site.
+            Descreva seu negócio e nossa inteligência artificial criará sugestões de texto e uma prévia visual da página inicial do seu futuro site.
           </p>
         </div>
 
@@ -85,7 +84,7 @@ export function AiWebsiteGenerator() {
                   disabled={isLoading}
                 />
                 <Button
-                  onClick={handleGenerateImage}
+                  onClick={handleGenerateCopy}
                   disabled={isLoading}
                   size="lg"
                   className="w-full font-bold"
@@ -104,27 +103,32 @@ export function AiWebsiteGenerator() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="aspect-[4/3] w-full rounded-lg bg-secondary/50 flex items-center justify-center border-2 border-dashed border-border/50">
+                <div className="aspect-video w-full rounded-lg bg-secondary/50 flex items-center justify-center border-2 border-dashed border-border/50 overflow-hidden">
                   {isLoading && (
                     <div className="w-full h-full p-4">
                       <Skeleton className="w-full h-full" />
-                      <p className="text-sm text-muted-foreground mt-2 text-center">A IA está desenhando seu site, aguarde...</p>
+                      <p className="text-sm text-muted-foreground mt-2 text-center">A IA está criando seu conteúdo, aguarde...</p>
                     </div>
                   )}
-                  {!isLoading && !generatedImage && (
+                  {!isLoading && !generatedCopy && (
                     <div className="text-center text-muted-foreground p-4">
                       <p>A pré-visualização do seu site aparecerá aqui.</p>
                     </div>
                   )}
-                  {generatedImage?.imageDataUri && (
-                     <div className="relative w-full h-full fade-in">
+                  {generatedCopy?.backgroundImageUrl && (
+                     <div className="relative w-full h-full fade-in text-white bg-black">
                         <Image
-                            src={generatedImage.imageDataUri}
-                            alt="Mockup de site gerado por IA"
+                            src={generatedCopy.backgroundImageUrl}
+                            alt="Fundo para mockup de site gerado por IA"
                             fill
-                            className="object-contain rounded-lg"
+                            className="object-cover opacity-50"
                             unoptimized
                         />
+                         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 space-y-4">
+                            <h3 className="font-headline text-2xl md:text-3xl font-bold text-shadow-lg">{generatedCopy.headline}</h3>
+                            <p className="text-sm md:text-base text-shadow">{generatedCopy.description}</p>
+                            <Button className="font-bold" size="lg">{generatedCopy.ctaButton}</Button>
+                         </div>
                     </div>
                   )}
                 </div>
