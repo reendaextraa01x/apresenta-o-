@@ -14,6 +14,7 @@ export function Header() {
           <Link href="#problem" className="text-muted-foreground transition-colors hover:text-foreground">O Problema</Link>
           <Link href="#benefits" className="text-muted-foreground transition-colors hover:text-foreground">Benefícios</Link>
           <Link href="#before-after" className="text-muted-foreground transition-colors hover:text-foreground">Resultados</Link>
+          <Link href="#ai-generator" className="text-muted-foreground transition-colors hover:text-foreground">Nossa IA</Link>
           <Link href="#faq" className="text-muted-foreground transition-colors hover:text-foreground">Dúvidas</Link>
         </nav>
         <div className="flex items-center gap-4">

@@ -8,6 +8,7 @@ import { BeforeAfter } from '@/components/landing/before-after';
 import { Cta } from '@/components/landing/cta';
 import { Footer } from '@/components/landing/footer';
 import { Faq } from '@/components/landing/faq';
+import { AiCopyGenerator } from '@/components/landing/ai-copy-generator';
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function Home() {
         <ProblemSolution />
         <Benefits />
         <BeforeAfter />
+        <AiCopyGenerator />
         <Faq />
         <Cta />
       </main>
