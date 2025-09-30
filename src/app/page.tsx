@@ -5,16 +5,18 @@ import { Benefits } from '@/components/landing/benefits';
 import { BeforeAfter } from '@/components/landing/before-after';
 import { Cta } from '@/components/landing/cta';
 import { Footer } from '@/components/landing/footer';
+import { Faq } from '@/components/landing/faq';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
         <Hero />
         <ProblemSolution />
         <Benefits />
         <BeforeAfter />
+        <Faq />
         <Cta />
       </main>
       <Footer />

@@ -1,5 +1,4 @@
 import { CheckCircle2, Award, Smartphone, BarChart, Rocket } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 const benefits = [
   {
@@ -35,10 +34,10 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50 dark:bg-card">
+    <section id="benefits" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Benefícios</div>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 fade-in">
+            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-semibold text-primary">Benefícios</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
                 Tudo que você precisa para decolar
             </h2>
@@ -46,9 +45,9 @@ export function Benefits() {
                 Um site profissional não é um custo, é um investimento que se paga rapidamente.
             </p>
         </div>
-        <div className="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-3 lg:gap-12">
-          {benefits.map((benefit) => (
-            <div key={benefit.title} className="flex items-start space-x-4 rounded-lg bg-card p-6 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-secondary">
+        <div className="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-8">
+          {benefits.map((benefit, i) => (
+            <div key={benefit.title} className={`fade-in fade-in-delay-${i + 1} flex items-start space-x-4 rounded-lg bg-secondary/50 p-6 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10`}>
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     {benefit.icon}
                 </div>

@@ -12,10 +12,10 @@ export function BeforeAfter() {
   const afterImage = PlaceHolderImages.find((img) => img.id === 'after-website');
 
   return (
-    <section id="before-after" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-card">
+    <section id="before-after" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
+          <div className="space-y-2 fade-in">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
               Veja a diferença que um site profissional faz!
             </h2>
@@ -26,7 +26,7 @@ export function BeforeAfter() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:gap-12">
-          <Card>
+          <Card className="fade-in fade-in-delay-1 bg-background/50 border-border/50">
             <CardHeader>
               <CardTitle className="font-headline text-center text-2xl">Antes</CardTitle>
             </CardHeader>
@@ -38,14 +38,14 @@ export function BeforeAfter() {
                   width={600}
                   height={400}
                   data-ai-hint={beforeImage.imageHint}
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full opacity-70"
                 />
               )}
             </CardContent>
           </Card>
-          <Card className="border-2 border-primary shadow-lg shadow-primary/20">
+          <Card className="border-2 border-primary shadow-lg shadow-primary/20 fade-in fade-in-delay-2 bg-background/50">
             <CardHeader>
-              <CardTitle className="font-headline text-center text-2xl">Depois</CardTitle>
+              <CardTitle className="font-headline text-center text-2xl text-primary">Depois</CardTitle>
             </CardHeader>
             <CardContent>
               {afterImage && (
