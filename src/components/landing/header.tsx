@@ -13,7 +13,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           <Link href="#problem" className="text-muted-foreground transition-colors hover:text-foreground">O Problema</Link>
           <Link href="#benefits" className="text-muted-foreground transition-colors hover:text-foreground">Benefícios</Link>
-          <Link href="#before-after" className="text-muted-foreground transition-colors hover:text-foreground">Resultados</Link>
+          <Link href="#live-customizer" className="text-muted-foreground transition-colors hover:text-foreground">Estilos</Link>
           <Link href="#style-quiz" className="text-muted-foreground transition-colors hover:text-foreground">Descubra seu Estilo</Link>
           <Link href="#gallery" className="text-muted-foreground transition-colors hover:text-foreground">Galeria</Link>
           <Link href="#faq" className="text-muted-foreground transition-colors hover:text-foreground">Dúvidas</Link>

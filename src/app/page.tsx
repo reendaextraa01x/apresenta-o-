@@ -4,7 +4,7 @@ import { Header } from '@/components/landing/header';
 import { Hero } from '@/components/landing/hero';
 import { ProblemSolution } from '@/components/landing/problem-solution';
 import { Benefits } from '@/components/landing/benefits';
-import { BeforeAfter } from '@/components/landing/before-after';
+import { LiveStyleCustomizer } from '@/components/landing/live-style-customizer';
 import { Cta } from '@/components/landing/cta';
 import { Footer } from '@/components/landing/footer';
 import { Faq } from '@/components/landing/faq';
@@ -55,7 +55,7 @@ export default function Home() {
         <Hero />
         <ProblemSolution />
         <Benefits />
-        <BeforeAfter />
+        <LiveStyleCustomizer />
         <StyleQuiz />
         <InspirationalGallery />
         <Faq />
