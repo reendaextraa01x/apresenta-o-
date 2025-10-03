@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: 'SiteSpark | Seu Site Profissional em 3 Dias',
   description:
     'Transforme Seu Negócio com um Site Profissional e de Alta Conversão. Entregamos em até 3 dias por um preço que você pode pagar.',
+  icons: {
+    icon: 'https://i.imgur.com/hhWMBlA.png',
+  },
 };
 
 export default function RootLayout({
